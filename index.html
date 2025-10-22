@@ -12,12 +12,12 @@
 </head>
 <body>
 
-    
+
     <header class="site-header">
         <div class="site-header__container">
             <div class="site-header__top-row">
                 <a href="областная-дезинфекция.рф" class="site-header__brand">
-                    <img src="https://static.tildacdn.com/tild6636-3134-4137-b963-663438646566/photo.svg" alt="Логотип" class="site-header__logo-img">
+                    <img src="public/logo.svg" alt="Логотип" class="site-header__logo-img">
                     <div class="site-header__logo-text">
                         <span class="site-header__logo-title">Центр дезинфекции +</span>
                         <span class="site-header__logo-subtitle">в Московской области</span>
@@ -28,7 +28,9 @@
                     <a href="tel:+74996771627" class="contacts__phone">+7 (499) 677-16-27</a>
                 </div>
                 <button class="burger-menu" aria-label="Открыть меню">
-                    <img src="https://static.tildacdn.com/tild3433-6635-4036-b739-623433663338/_.svg" alt="Меню">
+                    <span class="burger-menu__line"></span>
+                    <span class="burger-menu__line"></span>
+                    <span class="burger-menu__line"></span>
                 </button>
             </div>
             <nav class="main-nav">
@@ -43,11 +45,50 @@
                 </ul>
             </nav>
         </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu__overlay"></div>
+            <div class="mobile-menu__content">
+                <button class="mobile-menu__close" aria-label="Закрыть меню">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+                <nav class="mobile-menu__nav">
+                    <ul class="mobile-menu__list">
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link" data-section="disinfection">Дезинфекция</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link" data-section="rodents">Грызуны</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link" data-section="country">Дачные вредители</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link" data-section="mold">Плесень</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link" data-section="smells">Запахи</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link" data-section="all-services">Все услуги и цены</a>
+                        </li>
+                        <li class="mobile-menu__item">
+                            <a href="#" class="mobile-menu__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu__contacts">
+                    <a href="tel:+74996771627" class="mobile-menu__phone">+7 (499) 677-16-27</a>
+                    <p class="mobile-menu__worktime">Работаем без праздников и выходных!</p>
+                </div>
+            </div>
+        </div>
     </header>
-    
+
     <div class="header-placeholder"></div>
 
-    
+
     <section class="hero">
         <div class="hero__bg"></div>
         <div class="hero__container">
@@ -63,29 +104,29 @@
             </form>
         </div>
         <div class="hero__image-wrapper">
-            <img src="https://static.tildacdn.com/tild3733-3338-4238-b334-313465623032/33be4cbd-f3ea-4b78-b.png" alt="Сотрудник службы дезинфекции" class="hero__image">
+            <img src="public/hero-worker.webp" alt="Сотрудник службы дезинфекции" class="hero__image">
         </div>
         <div class="hero__blur"></div>
     </section>
 
-    
+
     <section class="section-title">
         <div class="section-title__container">
             <h2 class="section-title__heading" id="section-title">Стоимость дезобработки от насекомых</h2>
         </div>
     </section>
 
-    
+
     <section class="price-table">
         <div class="price-table__container">
             <p class="price-table__subtitle" id="price-subtitle">бытовые насекомые / дезинсекция</p>
-            
-            
+
+
             <div class="price-table__wrapper price-table__wrapper--disinfection" data-section="disinfection">
-                
+
                 <div class="price-table__group">
                     <div class="price-table__group-row">
-                        
+
                         <div class="price-table__column price-table__column--medium">
                             <h3 class="price-table__column-title">БЫТОВЫЕ НАСЕКОМЫЕ – КВАРТИРЫ</h3>
                             <div class="price-table__subheader">
@@ -139,8 +180,8 @@
                                 <span class="price-table__price">1000/1200 руб.</span>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="price-table__column price-table__column--medium">
                             <h3 class="price-table__column-title">БЫТОВЫЕ НАСЕКОМЫЕ – ДОМА, КОТТЕДЖИ</h3>
                             <div class="price-table__subheader">
@@ -197,11 +238,11 @@
                     </div>
                 </div>
 
-                
+
                 <div class="price-table__group">
                     <h3 class="price-table__group-title">БЫТОВЫЕ НАСЕКОМЫЕ – ЮРИДИЧЕСКИЕ ЛИЦА</h3>
                     <div class="price-table__group-row">
-                        
+
                         <div class="price-table__column price-table__column--small">
                             <h4 class="price-table__column-subtitle">ХОСТЕЛЫ, ОТЕЛИ, ОБЩЕЖИТИЯ (КЛОПЫ)</h4>
                             <div class="price-table__row">
@@ -233,8 +274,8 @@
                                 <span class="price-table__price">500 руб./ком.</span>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="price-table__column price-table__column--small">
                             <h4 class="price-table__column-subtitle">ОСТАЛЬНЫЕ ОБЪЕКТЫ</h4>
                             <div class="price-table__row">
@@ -270,9 +311,9 @@
                 </div>
             </div>
 
-            
+
             <div class="price-table__wrapper price-table__wrapper--insects active" data-section="insects">
-                
+
                 <div class="price-table__column">
                     <div class="price-table__row">
                         <span class="price-table__area">1 м²</span>
@@ -287,8 +328,8 @@
                         <span class="price-table__price">960 ₽</span>
                     </div>
                 </div>
-                
-                
+
+
                 <div class="price-table__column">
                     <div class="price-table__row">
                         <span class="price-table__area">6-10 м²</span>
@@ -304,14 +345,14 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="price-table__wrapper price-table__wrapper--disinfection" data-section="rodents">
                 <div class="price-table__group">
-                    
+
                     <div class="price-table__group-section">
                         <h4 class="price-table__section-subtitle">ДЕРАТИЗАЦИЯ; МЫШИ; КРЫСЫ</h4>
                         <div class="price-table__group-row">
-                            
+
                             <div class="price-table__column price-table__column--medium">
                                 <h3 class="price-table__column-title">КВАРТИРЫ</h3>
                                 <div class="price-table__row">
@@ -343,8 +384,8 @@
                                     <span class="price-table__price">от 1500 руб.</span>
                                 </div>
                             </div>
-                            
-                            
+
+
                             <div class="price-table__column price-table__column--medium">
                                 <h3 class="price-table__column-title">ДОМА, КОТТЕДЖИ</h3>
                                 <div class="price-table__row">
@@ -378,11 +419,11 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
+
+
                     <div class="price-table__group-section">
                         <div class="price-table__group-row">
-                            
+
                             <div class="price-table__column price-table__column--medium">
                                 <h3 class="price-table__column-title">УЧАСТКИ</h3>
                                 <div class="price-table__row">
@@ -414,8 +455,8 @@
                                     <span class="price-table__price">100 руб./сотка</span>
                                 </div>
                             </div>
-                            
-                            
+
+
                             <div class="price-table__column price-table__column--medium">
                                 <h3 class="price-table__column-title">КОММЕРЧЕСКИЕ ПОМЕЩЕНИЯ</h3>
                                 <div class="price-table__row">
@@ -451,7 +492,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="price-table__group">
                     <h3 class="price-table__group-title">ДОПОЛНИТЕЛЬНЫЙ ПРАЙС 2021 ГРЫЗУНЫ/ДЕРАТИЗАЦИЯ</h3>
                     <div class="price-table__group-row">
@@ -502,7 +543,7 @@
                 </div>
             </div>
 
-            
+
             <div class="price-table__wrapper price-table__wrapper--garden" data-section="garden">
                 <div class="price-table__column">
                     <h3 class="price-table__column-title">УЧАСТКИ; САДОВЫЕ ВРЕДИТЕЛИ</h3>
@@ -553,11 +594,11 @@
                 </div>
             </div>
             <div class="price-table__wrapper price-table__wrapper--disinfection" data-section="mold">
-                
+
                 <div class="price-table__group">
                     <h3 class="price-table__group-title">СТОИМОСТЬ ОБРАБОТКИ ПОРАЖЕННОГО УЧАСТКА</h3>
                     <div class="price-table__group-row">
-                        
+
                         <div class="price-table__column price-table__column--medium">
                             <h4 class="price-table__column-subtitle">РАСЧЕТ СТОИМОСТИ ПО МЕТРАМ КВАДРАТНЫМ</h4>
                             <div class="price-table__row">
@@ -601,8 +642,8 @@
                                 <span class="price-table__price">300 руб./м²</span>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="price-table__column price-table__column--medium">
                             <h4 class="price-table__column-subtitle">РАСЧЕТ СТОИМОСТИ ПО МЕТРАМ ПОГОННЫМ</h4>
                             <div class="price-table__row">
@@ -649,10 +690,10 @@
                     </div>
                 </div>
 
-                
+
                 <div class="price-table__group">
                     <div class="price-table__group-row">
-                        
+
                         <div class="price-table__column price-table__column--medium">
                             <h3 class="price-table__column-title">ДЕЗИНФЕКЦИЯ ПОМЕЩЕНИЙ ОТ ПАРОВ ПЛЕСЕНИ</h3>
                             <div class="price-table__subheader">
@@ -696,8 +737,8 @@
                                 <span class="price-table__price">2500 руб.</span>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="price-table__column price-table__column--medium">
                             <h3 class="price-table__column-title">ДЕЗИНФЕКЦИЯ КОММЕРЧЕСКИХ ПОМЕЩЕНИЙ ОТ ПАРОВ ПЛЕСЕНИ</h3>
                             <div class="price-table__subheader">
@@ -745,7 +786,7 @@
                 </div>
             </div>
             <div class="price-table__wrapper price-table__wrapper--disinfection" data-section="smells">
-                
+
                 <div class="price-table__group">
                     <div class="price-table__group-row">
                         <div class="price-table__column price-table__column--large">
@@ -796,7 +837,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="price-table__group">
                     <div class="price-table__group-row">
                         <div class="price-table__column price-table__column--large">
@@ -853,7 +894,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="price-table__group">
                     <div class="price-table__group-row">
                         <div class="price-table__column price-table__column--large">
@@ -910,13 +951,13 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="price-table__wrapper price-table__wrapper--disinfection" data-section="country">
-                
+
                 <div class="price-table__group">
                     <h3 class="price-table__group-title">ПРАЙС ДАЧНЫЕ ВРЕДИТЕЛИ</h3>
                     <div class="price-table__group-row">
-                        
+
                         <div class="price-table__column price-table__column--medium">
                             <h3 class="price-table__column-title">НАСЕКОМЫЕ, КРОТЫ, ГРЫЗУНЫ<br><span style="font-weight: 400; font-size: 13px;">Участки; Садовые вредители</span></h3>
                             <div class="price-table__row">
@@ -948,8 +989,8 @@
                                 <span class="price-table__price">100 руб./сотка</span>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="price-table__column price-table__column--medium">
                             <h3 class="price-table__column-title">ОБРАБОТКА ОТ ОС, ШЕРШНЕЙ<br><span style="font-weight: 400; font-size: 13px;">Любые объекты</span></h3>
                             <div class="price-table__row">
@@ -984,11 +1025,11 @@
                     </div>
                 </div>
 
-                
+
                 <div class="price-table__group">
                     <h3 class="price-table__group-title" style="text-align: center;">НАСЕКОМЫЕ, ЗАБОЛЕВАНИЯ РАСТЕНИЙ</h3>
                     <div class="price-table__group-row">
-                        
+
                         <div class="price-table__column price-table__column--medium">
                             <h3 class="price-table__column-title">Кусты, деревья</h3>
                             <div class="price-table__row">
@@ -1008,8 +1049,8 @@
                                 <span class="price-table__price">200 руб. штука</span>
                             </div>
                         </div>
-                        
-                        
+
+
                         <div class="price-table__column price-table__column--medium">
                             <h3 class="price-table__column-title">Парники, ангары с растениями</h3>
                             <div class="price-table__row">
@@ -1032,7 +1073,7 @@
                     </div>
                 </div>
 
-                
+
                 <div class="price-table__group">
                     <h3 class="price-table__group-title">БОРЩЕВИК</h3>
                     <div class="price-table__group-row">
@@ -1083,15 +1124,15 @@
                 </div>
             </div>
             <div class="price-table__wrapper price-table__wrapper--all-services" data-section="all-services">
-                
-                
+
+
                 <div class="price-table__group">
                     <h3 class="price-table__group-title">БЫТОВЫЕ НАСЕКОМЫЕ – ДЕЗИНСЕКЦИЯ</h3>
-                    
-                    
+
+
                     <div class="price-table__group-section">
                         <div class="price-table__group-row price-table__group-row--single">
-                            
+
                             <div class="price-table__column price-table__column--full-width">
                                 <h3 class="price-table__column-title">БЫТОВЫЕ НАСЕКОМЫЕ – КВАРТИРЫ</h3>
                                 <div class="price-table__subheader">
@@ -1148,7 +1189,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="price-table__group-section">
                         <div class="price-table__group-row price-table__group-row--single">
                             <div class="price-table__column price-table__column--full-width">
@@ -1207,7 +1248,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="price-table__group-section">
                         <h4 class="price-table__section-subtitle">БЫТОВЫЕ НАСЕКОМЫЕ – ЮРИДИЧЕСКИЕ ЛИЦА</h4>
                         <div class="price-table__group-row price-table__group-row--single">
@@ -1281,11 +1322,11 @@
                     </div>
                 </div>
 
-                
+
                 <div class="price-table__group">
                     <h3 class="price-table__group-title">ДЕРАТИЗАЦИЯ – МЫШИ, КРЫСЫ</h3>
-                    
-                    
+
+
                     <div class="price-table__group-section">
                         <div class="price-table__group-row price-table__group-row--single">
                             <div class="price-table__column price-table__column--full-width">
@@ -1357,7 +1398,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="price-table__group-section">
                         <div class="price-table__group-row price-table__group-row--single">
                             <div class="price-table__column price-table__column--full-width">
@@ -1429,7 +1470,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="price-table__group-section">
                         <div class="price-table__group-row price-table__group-row--single">
                             <div class="price-table__column price-table__column--full-width">
@@ -1479,11 +1520,11 @@
                     </div>
                 </div>
 
-                
+
                 <div class="price-table__group">
                     <h3 class="price-table__group-title">ПРАЙС ДАЧНЫЕ ВРЕДИТЕЛИ</h3>
-                    
-                    
+
+
                     <div class="price-table__group-section">
                         <div class="price-table__group-row price-table__group-row--single">
                             <div class="price-table__column price-table__column--full-width">
@@ -1555,7 +1596,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="price-table__group-section">
                         <h4 class="price-table__section-subtitle">НАСЕКОМЫЕ, ЗАБОЛЕВАНИЯ РАСТЕНИЙ</h4>
                         <div class="price-table__group-row price-table__group-row--single">
@@ -1604,7 +1645,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="price-table__group-section">
                         <h4 class="price-table__section-subtitle">БОРЩЕВИК</h4>
                         <div class="price-table__group-row price-table__group-row--single">
@@ -1657,11 +1698,11 @@
 
                 </div>
 
-                
+
                 <div class="price-table__group">
                     <h3 class="price-table__group-title">ОБРАБОТКА ОТ ПЛЕСЕНИ</h3>
-                    
-                    
+
+
                     <div class="price-table__group-section">
                         <h4 class="price-table__section-subtitle">СТОИМОСТЬ ОБРАБОТКИ ПОРАЖЕННОГО УЧАСТКА</h4>
                         <div class="price-table__group-row price-table__group-row--single">
@@ -1758,7 +1799,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="price-table__group-section">
                         <div class="price-table__group-row price-table__group-row--single">
                             <div class="price-table__column price-table__column--full-width">
@@ -1855,11 +1896,11 @@
                     </div>
                 </div>
 
-                
+
                 <div class="price-table__group">
                     <h3 class="price-table__group-title">УСТРАНЕНИЕ ЗАПАХОВ</h3>
-                    
-                    
+
+
                     <div class="price-table__group-section">
                         <div class="price-table__group-row price-table__group-row--single">
                             <div class="price-table__column price-table__column--full-width">
@@ -1910,7 +1951,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="price-table__group-section">
                         <div class="price-table__group-row price-table__group-row--single">
                             <div class="price-table__column price-table__column--full-width">
@@ -1967,7 +2008,7 @@
                         </div>
                     </div>
 
-                    
+
                     <div class="price-table__group-section">
                         <div class="price-table__group-row price-table__group-row--single">
                             <div class="price-table__column price-table__column--full-width">
@@ -2047,68 +2088,68 @@
             </div>
         </div>
     </section>
-    
+
     <section class="services-grid">
         <div class="services-grid__container">
-            
+
             <div class="services-grid__group">
                 <h3 class="services-grid__title">Обработка помещений от</h3>
                 <div class="services-grid__items">
                     <a href="#" class="services-grid__item">
-                        <img src="https://static.tildacdn.com/tild6436-6235-4636-a661-383261333561/photo.jpg" alt="Клопы" class="services-grid__image">
+                        <img src="public/bedbugs.webp" alt="Клопы" class="services-grid__image">
                         <span class="services-grid__name">клопов</span>
                     </a>
                     <a href="#" class="services-grid__item">
-                        <img src="https://static.tildacdn.com/tild3563-3466-4033-a463-626635366166/photo.jpg" alt="Тараканы" class="services-grid__image">
+                        <img src="public/cockroaches.webp" alt="Тараканы" class="services-grid__image">
                         <span class="services-grid__name">тараканов</span>
                     </a>
                     <a href="#" class="services-grid__item">
-                        <img src="https://static.tildacdn.com/tild3539-3961-4330-a539-663462633037/photo.jpg" alt="Насекомые" class="services-grid__image">
+                        <img src="public/insects.webp" alt="Насекомые" class="services-grid__image">
                         <span class="services-grid__name">насекомых</span>
                     </a>
                 </div>
             </div>
-            
-            
+
+
             <div class="services-grid__group">
                 <h3 class="services-grid__title">Обработка участков от</h3>
                 <div class="services-grid__items">
                     <a href="#" class="services-grid__item">
-                        <img src="https://static.tildacdn.com/tild3739-3739-4364-a633-626265373735/photo.jpg" alt="Клещи" class="services-grid__image">
+                        <img src="public/ticks.jpg" alt="Клещи" class="services-grid__image">
                         <span class="services-grid__name">клещей</span>
                     </a>
                     <a href="#" class="services-grid__item">
-                        <img src="https://static.tildacdn.com/tild3631-3862-4662-b666-636132333334/komar.jpg" alt="Комары" class="services-grid__image">
+                        <img src="public/mosquitoes.jpg" alt="Комары" class="services-grid__image">
                         <span class="services-grid__name">комаров</span>
                     </a>
                     <a href="#" class="services-grid__item">
-                        <img src="https://static.tildacdn.com/tild3761-3866-4830-b332-666239343938/photo.jpg" alt="Осы" class="services-grid__image">
+                        <img src="public/wasps.jpg" alt="Осы" class="services-grid__image">
                         <span class="services-grid__name">ос</span>
                     </a>
                     <a href="#" class="services-grid__item">
-                        <img src="https://static.tildacdn.com/tild6366-3032-4632-b137-636263313136/FoZsyM1l4qm013qBCwMJ.jpg" alt="Тля" class="services-grid__image">
+                        <img src="public/aphids.webp" alt="Тля" class="services-grid__image">
                         <span class="services-grid__name">тли</span>
                     </a>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section class="methods">
         <div class="methods__container">
             <h2 class="methods__title">Методы обработки</h2>
-            
-            
+
+
             <div class="methods__tabs">
                 <button class="methods__tab methods__tab--active" data-tab="hot">Горячий туман</button>
                 <button class="methods__tab" data-tab="cold">Холодный туман</button>
                 <button class="methods__tab" data-tab="spray">Опрыскивание</button>
                 <button class="methods__tab" data-tab="barrier">Барьерная защита</button>
             </div>
-            
-            
+
+
             <div class="methods__content">
-                
+
                 <div class="methods__item methods__item--active" data-content="hot">
                     <div class="methods__text">
                         <h3 class="methods__subtitle">ДЕЗОБРАБОТКА ГОРЯЧИМ ТУМАНОМ</h3>
@@ -2118,12 +2159,12 @@
                         </p>
                     </div>
                     <div class="methods__images">
-                        <img src="https://static.tildacdn.com/tild6236-6161-4334-a133-353666383962/dezinfektor.jpg" alt="Горячий туман">
-                        <img src="https://static.tildacdn.com/tild3862-3363-4733-a332-336536616238/obrabotka-goryachim-.jpg" alt="Обработка горячим туманом">
+                        <img src="public/hot-fog-1.jpg" alt="Горячий туман">
+                        <img src="public/hot-fog-2.webp" alt="Обработка горячим туманом">
                     </div>
                 </div>
-                
-                
+
+
                 <div class="methods__item" data-content="cold">
                     <div class="methods__text">
                         <h3 class="methods__subtitle">ДЕЗОБРАБОТКА ХОЛОДНЫМ ТУМАНОМ</h3>
@@ -2132,12 +2173,12 @@
                         </p>
                     </div>
                     <div class="methods__images">
-                        <img src="https://static.tildacdn.com/tild3762-6533-4761-b634-656135376662/dezinfekciya-ot-klec.png" alt="Холодный туман">
-                        <img src="https://static.tildacdn.com/tild6537-3766-4232-b236-616434366230/image_146.png" alt="Обработка холодным туманом">
+                        <img src="public/cold-fog-1.webp" alt="Холодный туман">
+                        <img src="public/cold-fog-2.webp" alt="Обработка холодным туманом">
                     </div>
                 </div>
-                
-                
+
+
                 <div class="methods__item" data-content="spray">
                     <div class="methods__text">
                         <h3 class="methods__subtitle">ДЕЗОБРАБОТКА МЕТОДОМ ОПРЫСКИВАНИЯ</h3>
@@ -2146,12 +2187,12 @@
                         </p>
                     </div>
                     <div class="methods__images">
-                        <img src="https://static.tildacdn.com/tild3233-3037-4462-b661-626437636434/GettyImages-94801095.jpg" alt="Опрыскивание">
-                        <img src="https://static.tildacdn.com/tild3861-6165-4837-b961-316130303435/605abd7c1f74fb308e3d.jpg" alt="Метод опрыскивания">
+                        <img src="public/spray-1.jpg" alt="Опрыскивание">
+                        <img src="public/spray-2.jpg" alt="Метод опрыскивания">
                     </div>
                 </div>
-                
-                
+
+
                 <div class="methods__item" data-content="barrier">
                     <div class="methods__text">
                         <h3 class="methods__subtitle">БАРЬЕРНАЯ ЗАЩИТА</h3>
@@ -2161,22 +2202,22 @@
                         </p>
                     </div>
                     <div class="methods__images">
-                        <img src="https://static.tildacdn.com/tild3330-6636-4066-b838-646566363930/kak-unichtozhit-tara.jpg" alt="Барьерная защита">
-                        <img src="https://static.tildacdn.com/tild3234-6433-4635-a464-386431616630/diploma_1_1.png" alt="Барьерная обработка">
+                        <img src="public/barrier-1.webp" alt="Барьерная защита">
+                        <img src="public/barrier-2.webp" alt="Барьерная обработка">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section class="objects">
         <div class="objects__container">
             <h2 class="objects__title">Какие объекты обрабатываем</h2>
-            
+
             <div class="objects__grid">
-                
+
                 <div class="objects__item">
-                    <img src="https://static.tildacdn.com/tild3333-3136-4265-b030-623138303762/White_interior_12_.jpg" alt="Жилые помещения" class="objects__image">
+                    <img src="public/residential.jpg" alt="Жилые помещения" class="objects__image">
                     <h3 class="objects__subtitle">Обработка жилых помещений</h3>
                     <ul class="objects__list">
                         <li>квартиры</li>
@@ -2184,10 +2225,10 @@
                         <li>дачи</li>
                     </ul>
                 </div>
-                
-                
+
+
                 <div class="objects__item">
-                    <img src="https://static.tildacdn.com/tild6239-6435-4532-b763-353938373039/11da3e93727a96c003be.jpg" alt="Юридические лица" class="objects__image">
+                    <img src="public/commercial.jpg" alt="Юридические лица" class="objects__image">
                     <h3 class="objects__subtitle">ОБРАБОТКА ЮРИДИЧЕСКИХ ЛИЦ</h3>
                     <ul class="objects__list">
                         <li>магазины</li>
@@ -2196,10 +2237,10 @@
                         <li>производство</li>
                     </ul>
                 </div>
-                
-                
+
+
                 <div class="objects__item">
-                    <img src="https://static.tildacdn.com/tild3531-3731-4336-a136-653638616136/park-himmash.jpg" alt="Участки" class="objects__image">
+                    <img src="public/outdoor.jpg" alt="Участки" class="objects__image">
                     <h3 class="objects__subtitle">ОБРАБОТКА УЧАСТКОВ</h3>
                     <ul class="objects__list">
                         <li>дачные участки</li>
@@ -2211,12 +2252,12 @@
             </div>
         </div>
     </section>
-    
+
     <section class="discount">
         <div class="discount__bg"></div>
         <div class="discount__container">
             <div class="discount__grid">
-                
+
                 <div class="discount__left">
                     <h2 class="discount__title">Скидка на дезобработку 25%</h2>
                     <div class="discount__timer-block">
@@ -2224,8 +2265,8 @@
                         <div class="discount__timer" id="discount-timer">06 : 48 : 22</div>
                     </div>
                 </div>
-                
-                
+
+
                 <div class="discount__right">
                     <form class="discount__form">
                         <input type="tel" class="discount__input" placeholder="+7 999 999 99 99" required>
@@ -2237,29 +2278,29 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="discount__blur discount__blur--top"></div>
         <div class="discount__blur discount__blur--bottom"></div>
     </section>
-    
+
     <section class="reviews">
         <div class="reviews__container">
             <h2 class="reviews__title">Отзывы</h2>
-            
-            
+
+
             <div class="reviews__slider-wrapper">
                 <div class="reviews__slider" id="reviews-slider">
                     <div class="reviews__slides">
                         <div class="reviews__slide reviews__slide--active">
-                            <img src="https://static.tildacdn.com/tild6435-3935-4165-a135-313539663936/__1.png" alt="Отзыв 1">
+                            <img src="public/slider-1.png" alt="Отзыв 1">
                         </div>
                         <div class="reviews__slide">
-                            <img src="https://static.tildacdn.com/tild3338-3865-4465-a139-663431383233/__2.png" alt="Отзыв 2">
+                            <img src="public/slider-2.png" alt="Отзыв 2">
                         </div>
                     </div>
                 </div>
-                
-                
+
+
                 <button class="reviews__arrow reviews__arrow--prev" aria-label="Предыдущий отзыв">
                     <svg width="10" height="18" viewBox="0 0 10.6 18" fill="none">
                         <polyline stroke="#ffffff" stroke-width="2" points="9,1 1,9 9,17"/>
@@ -2270,71 +2311,71 @@
                         <polyline stroke="#ffffff" stroke-width="2" points="1,1 9,9 1,17"/>
                     </svg>
                 </button>
-                
-                
+
+
                 <div class="reviews__dots">
                     <button class="reviews__dot reviews__dot--active" data-slide="0" aria-label="Перейти к отзыву 1"></button>
                     <button class="reviews__dot" data-slide="1" aria-label="Перейти к отзыву 2"></button>
                 </div>
             </div>
-            
-            
+
+
             <div class="reviews__mobile-scroll">
                 <div class="reviews__mobile-container">
                     <div class="reviews__mobile-item">
-                        <img src="https://static.tildacdn.com/tild6365-3462-4266-b536-393734393830/1.png" alt="Отзыв 1">
+                        <img src="public/mobile-1.webp" alt="Отзыв 1">
                     </div>
                     <div class="reviews__mobile-item">
-                        <img src="https://static.tildacdn.com/tild3964-6166-4732-a339-323932396564/2.png" alt="Отзыв 2">
+                        <img src="public/mobile-2.png" alt="Отзыв 2">
                     </div>
                     <div class="reviews__mobile-item">
-                        <img src="https://static.tildacdn.com/tild6665-3338-4564-a132-636164393762/3.png" alt="Отзыв 3">
+                        <img src="public/mobile-3.webp" alt="Отзыв 3">
                     </div>
                     <div class="reviews__mobile-item">
-                        <img src="https://static.tildacdn.com/tild3331-3731-4863-b833-353139363330/4.png" alt="Отзыв 4">
+                        <img src="public/mobile-4.png" alt="Отзыв 4">
                     </div>
                     <div class="reviews__mobile-item">
-                        <img src="https://static.tildacdn.com/tild6634-3331-4438-b662-386232306262/5.png" alt="Отзыв 5">
+                        <img src="public/mobile-5.png" alt="Отзыв 5">
                     </div>
                     <div class="reviews__mobile-item">
-                        <img src="https://static.tildacdn.com/tild6362-3938-4437-b165-653139623530/6.png" alt="Отзыв 6">
+                        <img src="public/mobile-6.png" alt="Отзыв 6">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
     <section class="work-steps">
         <div class="work-steps__container">
             <h2 class="work-steps__title">Схема работы</h2>
-            
+
             <div class="work-steps__grid">
-                
+
                 <div class="work-steps__item">
                     <div class="work-steps__number">01</div>
                     <p class="work-steps__text">Согласование заявки</p>
                 </div>
-                
-                
+
+
                 <div class="work-steps__item">
                     <div class="work-steps__number">02</div>
                     <p class="work-steps__text">Прибытие дезинфектора + подбор препарата</p>
                 </div>
-                
-                
+
+
                 <div class="work-steps__item">
                     <div class="work-steps__number">03</div>
                     <p class="work-steps__text">Дезобработка + установка барьерной защиты</p>
                 </div>
-                
-                
+
+
                 <div class="work-steps__item">
                     <div class="work-steps__number">04</div>
                     <p class="work-steps__text">Оформление гарантии + оплата</p>
                 </div>
             </div>
-            
-            
+
+
             <div class="work-steps__mobile-scroll">
                 <div class="work-steps__mobile-container">
                     <div class="work-steps__mobile-item">
@@ -2357,13 +2398,13 @@
             </div>
         </div>
     </section>
-    
+
     <section class="faq">
         <div class="faq__container">
             <h2 class="faq__title">Вопрос/ответ</h2>
-            
+
             <div class="faq__grid">
-                
+
                 <div class="faq__column">
                     <div class="faq__item">
                         <button class="faq__question" aria-expanded="false">
@@ -2381,7 +2422,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="faq__item">
                         <button class="faq__question" aria-expanded="false">
                             <span class="faq__question-text">Как и когда проводить уборку после дезобработки?</span>
@@ -2399,8 +2440,8 @@
                         </div>
                     </div>
                 </div>
-                
-                
+
+
                 <div class="faq__column">
                     <div class="faq__item">
                         <button class="faq__question" aria-expanded="false">
@@ -2418,7 +2459,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="faq__item">
                         <button class="faq__question" aria-expanded="false">
                             <span class="faq__question-text">Как действует гарантия?</span>
@@ -2439,7 +2480,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="contacts">
         <div class="contacts__container">
             <h2 class="contacts__title">Контакты</h2>
@@ -2466,44 +2507,43 @@
                 </div>
             </div>
             <div class="contacts__map">
-                <img src="https://i.ibb.co/TqPFR3TW/photo-2025-10-18-14-15-08.jpg" alt="Карта" class="contacts__map-image">
+                <img src="public/map.webp" alt="Карта" class="contacts__map-image">
             </div>
         </div>
     </section>
-    
+
     <footer class="footer">
         <div class="footer__container">
-            
+
             <div class="footer__top">
-                
+
                 <div class="footer__brand">
                     <a href="/" class="footer__logo">
-                        <img src="https://static.tildacdn.com/tild6636-3134-4137-b963-663438646566/photo.svg" alt="Логотип" class="footer__logo-img">
+                        <img src="public/logo.svg" alt="Логотип" class="footer__logo-img">
                         <div class="footer__logo-text">
                             <span class="footer__logo-title">Центр дезинфекции</span>
                             <span class="footer__logo-subtitle">в Мособласти</span>
                         </div>
                     </a>
                 </div>
-                
-                
+
                 <nav class="footer__nav">
-                    <a href="/yslygiceni" class="footer__nav-link">Все услуги и цены</a>
-                    <a href="/bakterii-virusi" class="footer__nav-link">Дезинфекция</a>
-                    <a href="/dezinsekciya" class="footer__nav-link">Насекомые</a>
-                    <a href="/deratizaciya" class="footer__nav-link">Грызуны</a>
-                    <a href="/dezodoraciya" class="footer__nav-link">Запахи</a>
-                    <a href="/uchastki" class="footer__nav-link">Обработка участков</a>
+                    <a href="#" class="footer__nav-link" data-section="all-services">Все услуги и цены</a>
+                    <a href="#" class="footer__nav-link" data-section="disinfection">Дезинфекция</a>
+                    <a href="#" class="footer__nav-link" data-section="mold">Плесень</a>
+                    <a href="#" class="footer__nav-link" data-section="rodents">Грызуны</a>
+                    <a href="#" class="footer__nav-link" data-section="smells">Запахи</a>
+                    <a href="#" class="footer__nav-link" data-section="country">Дачные вредители</a>
                     <a href="#kontakti" class="footer__nav-link">Контакты</a>
                 </nav>
-                
-                
+
+
                 <div class="footer__phone-block">
                     <a href="tel:+74996771627" class="footer__phone">+7 (499) 677-16-27</a>
                 </div>
             </div>
-            
-            
+
+
             <div class="footer__bottom">
                 <div class="footer__info">
                     <a href="#popup:infoblock" class="footer__link">Политика конфиденциальности</a>
@@ -2511,8 +2551,8 @@
                 </div>
             </div>
         </div>
-        
-        
+
+
         <div class="footer__copyright">
             <div class="footer__copyright-container">
                 <p class="footer__copyright-text">ИП АББАСОВ Р. З., ИНН 500705203807, ОГРН 322508100478504</p>
@@ -2521,7 +2561,7 @@
         </div>
     </footer>
 
-    
+
     <button class="scroll-top" aria-label="Вернуться к началу страницы">
         <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="50" height="50" rx="25" fill="#cb1a1a"/>

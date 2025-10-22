@@ -440,6 +440,59 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initScrollTop();
 
+    function initMobileMenu() {
+    const burgerBtn = document.querySelector('.burger-menu');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeBtn = document.querySelector('.mobile-menu__close');
+    const overlay = document.querySelector('.mobile-menu__overlay');
+    const mobileLinks = document.querySelectorAll('.mobile-menu__link[data-section]');
+    const body = document.body;
+    
+    function openMenu() {
+        mobileMenu.classList.add('active');
+        body.classList.add('menu-open');
+    }
+    
+    function closeMenu() {
+        mobileMenu.classList.remove('active');
+        body.classList.remove('menu-open');
+    }
+    
+    burgerBtn?.addEventListener('click', openMenu);
+    closeBtn?.addEventListener('click', closeMenu);
+    overlay?.addEventListener('click', closeMenu);
+    
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const section = this.dataset.section;
+            
+            if (section) {
+                switchSection(section);
+                
+                mobileLinks.forEach(l => l.classList.remove('mobile-menu__link--active'));
+                this.classList.add('mobile-menu__link--active');
+            }
+            
+            closeMenu();
+        });
+    });
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const section = this.dataset.section;
+            mobileLinks.forEach(mobileLink => {
+                if (mobileLink.dataset.section === section) {
+                    mobileLink.classList.add('mobile-menu__link--active');
+                } else {
+                    mobileLink.classList.remove('mobile-menu__link--active');
+                }
+            });
+        });
+    });
+}
+
+    initMobileMenu();
     
     
     
