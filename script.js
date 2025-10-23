@@ -40,6 +40,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
 
+    const serviceMapping = {
+        'клопов': 'disinfection',
+        'тараканов': 'disinfection',
+        'насекомых': 'disinfection',
+        'клещей': 'country',
+        'комаров': 'country',
+        'ос': 'country',
+        'тли': 'country'
+    };
+
     function mapFooterLinkToSection(href) {
         const mappings = {
             '/yslygiceni': 'all-services',
@@ -107,7 +117,6 @@ document.addEventListener('DOMContentLoaded', function() {
         adjustHeroFeatures();
     });
     
-    // Расшифровка токенов (без изменений)
     function _0xDecrypt(_0xParts) {
         let _0xCombined = _0xParts.join('');
         let _0xDecoded = atob(_0xCombined);
@@ -120,11 +129,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     const _0xTokenData = {
-        "botId": ["SEVARk", "ZMR0NA", "Sg=="],
-        "botKey": ["MTA6Mh1CICgMPj8/", "HBQ1RD4jCzg+GCcU", "DBwyOU8JJUcZPTk="]
+        "botId": ["SEVDRE", "BCRkdB", "QA=="],
+        "botKey": ["MTA1PwYlRD8TCRhB", "R0cxNyYtHk4/JSQb", "Rw8aAi0XXQVGSxs="]
     };
     
-    const _0xChatData = [""];
+    const _0xChatData = ["Q0RE", "RERC", "T0dK"];
     
     const _0xBotId = _0xDecrypt(_0xTokenData.botId);
     const _0xBotKey = _0xDecrypt(_0xTokenData.botKey);
@@ -394,7 +403,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    function switchSection(section) {
+    function switchSection(section, scrollToTables = true) {
         navLinks.forEach(link => {
             link.classList.remove('main-nav__link--active');
             if (link.dataset.section === section) {
@@ -418,10 +427,22 @@ document.addEventListener('DOMContentLoaded', function() {
         
         setTimeout(addCallbackForms, 10);
         
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+        if (scrollToTables) {
+            setTimeout(() => {
+                const priceSection = document.querySelector('.price-table');
+                if (priceSection) {
+                    const headerHeight = document.querySelector('.site-header').offsetHeight || 86;
+                    const offset = 20;
+                    const elementPosition = priceSection.getBoundingClientRect().top + window.pageYOffset;
+                    const offsetPosition = elementPosition - headerHeight - offset;
+                    
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 100);
+        }
     }
     
     navLinks.forEach(link => {
@@ -442,6 +463,19 @@ document.addEventListener('DOMContentLoaded', function() {
             if (section) {
                 e.preventDefault();
                 switchSection(section);
+            }
+        });
+    });
+    
+    const serviceItems = document.querySelectorAll('.services-grid__item');
+    serviceItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const serviceName = this.querySelector('.services-grid__name').textContent.trim();
+            const targetSection = serviceMapping[serviceName];
+            
+            if (targetSection) {
+                switchSection(targetSection);
             }
         });
     });
@@ -475,7 +509,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    switchSection('disinfection');
+    switchSection('disinfection', false);
 
     function initScrollTop() {
         const scrollBtn = document.querySelector('.scroll-top');
