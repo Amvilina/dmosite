@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         disinfection: {
             heroTitle: 'Профессиональная дезинфекция помещений в Мособласти',
             sectionTitle: 'Прайс бытовые насекомые/дезинсекция',
-            subtitle: 'комплексная обработка'
+            subtitle: 'базовая обработка'
         },
         rodents: {
             heroTitle: 'Профессиональная дератизация от грызунов в Мособласти',
@@ -49,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'ос': 'country',
         'тли': 'country'
     };
+
+    
 
     function mapFooterLinkToSection(href) {
         const mappings = {
