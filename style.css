@@ -2104,7 +2104,7 @@ body.menu-open {
     font-size: 13px;
     font-weight: 400;
     opacity: 0.5;
-    text-decoration: none;
+    text-decoration: underline;
     font-family: 'Manrope', Arial, sans-serif;
     transition: opacity 0.3s ease;
 }
