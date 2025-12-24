@@ -629,29 +629,57 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    const phoneInputs = document.querySelectorAll('input[type="tel"]');
-    phoneInputs.forEach(input => {
-        input.addEventListener('input', function(e) {
-            let value = e.target.value.replace(/\D/g, '');
-            if (value.length > 0) {
-                if (value[0] === '8') {
-                    value = '7' + value.slice(1);
-                }
-                let formatted = '+7';
-                if (value.length > 1) {
-                    formatted += ' (' + value.slice(1, 4);
-                }
-                if (value.length >= 4) {
-                    formatted += ') ' + value.slice(4, 7);
-                }
-                if (value.length >= 7) {
-                    formatted += '-' + value.slice(7, 9);
-                }
-                if (value.length >= 9) {
-                    formatted += '-' + value.slice(9, 11);
-                }
-                e.target.value = formatted;
-            }
-        });
+    // Делегированная обработка всех полей телефона (в том числе добавляемых динамически)
+    document.addEventListener('input', function(e) {
+        const input = e.target;
+        if (!(input instanceof HTMLInputElement)) return;
+        if (input.type !== 'tel') return;
+
+        const currentValue = input.value;
+        const previousValue = input.dataset.prevValue || '';
+        const inputType = e.inputType || '';
+
+        let digits = currentValue.replace(/\D/g, '');
+        const prevDigits = previousValue.replace(/\D/g, '');
+
+        // Если поле очистили или ввели только мусор — очищаем полностью
+        if (digits.length === 0) {
+            input.value = '';
+            input.dataset.prevValue = '';
+            return;
+        }
+
+        // Нормализуем первую цифру
+        if (digits[0] === '8') {
+            digits = '7' + digits.slice(1);
+        }
+   // Особый случай: нажали backspace на границе с тире/пробелом/скобкой в конце
+        // Тогда браузер удалил только разделитель, а мы дополнительно "съедаем" одну цифру,
+        // чтобы интуитивно удалялась и цифра, и разделитель.
+        if (
+            inputType.startsWith('delete') &&
+            input.selectionStart === currentValue.length && // курсор в конце
+            prevDigits.length === digits.length &&          // количество цифр не изменилось
+            previousValue.length - currentValue.length === 1 // ушёл ровно один символ (разделитель)
+        ) {
+            digits = digits.slice(0, -1);
+        }
+
+        let formatted = '+7';
+        if (digits.length > 1) {
+            formatted += ' (' + digits.slice(1, 4);
+        }
+        if (digits.length >= 4) {
+            formatted += ') ' + digits.slice(4, 7);
+        }
+        if (digits.length >= 7) {
+            formatted += '-' + digits.slice(7, 9);
+        }
+        if (digits.length >= 9) {
+            formatted += '-' + digits.slice(9, 11);
+        }
+
+        input.value = formatted;
+        input.dataset.prevValue = formatted;
     });
 });
